@@ -1,0 +1,11 @@
+
+@media (min-width: 768px) { 
+    .menu__mobile{
+        display: none;
+    }
+
+    .menu{
+        
+    }
+    
+ }

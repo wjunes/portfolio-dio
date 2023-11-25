@@ -1,0 +1,105 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+:root{
+    --primary-color: #F0F0F0;
+    --primary-bg-color: #111217;
+    --secondary-bg-color: #28292E;
+    --title-color: #9A9A9C;
+    --link-color: #9A9A9C;
+    --text-color: #9A9A9C;
+    --icon-color: #C7C8C9;
+    --border-color: #008ee6ed ;
+  }
+
+
+body{
+    background: var(--primary-bg-color);
+    font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+i{
+    color: var(--icon-color);
+    
+}
+
+#toggleTheme{
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.brand__logo{
+    color: var(--icon-color);
+}
+
+.header{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+
+.header__brand .brand__logo{
+    width: 3.25rem;
+    height: 3.25rem;
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100vw;
+    height: 80px;
+    background: var(--primary-bg-color);
+    border-bottom: solid 2px var(--border-color);
+    /* position: fixed;
+    top: 80px; */
+    
+}
+
+.menu__mobile{
+    justify-content: space-between;
+    border-top: solid 2px var(--border-color);
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+}
+
+.menu a{
+    text-decoration: none;
+}
+
+.menu__item{
+    width: 100%;
+}
+
+.menu__item .menu__link{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-color);
+    gap: .50rem;
+}
+
+.menu__link.active .menu__icon,
+.menu__link.active .menu__text{
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+#menu__icon, .menu__text{
+    color: var(--text-color);
+}
+
+.menu__icon{
+    font-size: 1.5rem;
+}
+
+.menu__text{
+    font-size: 0.75rem;
+    
+    text-transform: uppercase;
+}

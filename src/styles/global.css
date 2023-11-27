@@ -1,7 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
-:root{
+:root, :root[data-theme='dark']{
     --primary-color: #F0F0F0;
     --primary-bg-color: #111217;
     --secondary-bg-color: #28292E;
@@ -9,23 +9,120 @@
     --link-color: #9A9A9C;
     --text-color: #9A9A9C;
     --icon-color: #C7C8C9;
-    --border-color: #008ee6ed ;
+    --border-color: #82b5d4; ;
+  }
+
+  :root[data-theme='light']{
+    --primary-color: #0B0B0F;
+    --primary-bg-color: #E9E9E9;
+    --secondary-bg-color: #C7C8C9;
+    --border-color: #C7C8C9;
+    --title-color: #0B0B0F;
+    --link-color: #28292E;
+    --text-color: #28292E;
+    --icon-color: #56575A;
+
+  }
+
+  html[data-theme='light'] .brand__logo{
+    filter: invert(1);
+  }
+
+  html[data-theme='light'] .technologies__logo {
+    filter: invert(80%);
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+    list-style: none;
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondary-bg-color) transparent;
   }
 
 
 body{
     background: var(--primary-bg-color);
     font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
 }
 
-i{
+::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--secondary-bg-color);
+    border-radius: 50rem;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--text-color);
+  }
+  
+  a:hover {
+    color: var(--primary-color);
+  }
+  
+  i {
     color: var(--icon-color);
-    
-}
+  }
+  
+  b {
+    font-weight: 400;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 200;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    text-align: center;
+    letter-spacing: 0.4rem;
+  }
+  
+  h3 {
+    font-size: 1.55rem;
+    text-align: left;
+  }
+
+  
+h4 {
+    color: var(--primary-color);
+    font-weight: 400;
+    font-size: 1.15rem;
+    text-align: left;
+  }
+  
+  h1, h2, h3 {
+    font-family: 'League Spartan', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    color: var(--title-color);
+    font-weight: 200;
+  }
+  
+  p, span, li {
+    font-size: 1rem;
+  }
+  
+  p {
+    text-align: justify;
+  }
 
 #toggleTheme{
     font-size: 2rem;
     color: var(--primary-color);
+    cursor: pointer;
+    transition: ease-in-out 0.5s;
 }
 
 .brand__logo{
@@ -37,6 +134,7 @@ i{
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
+    width: 100vw;
     padding: 0.5rem 1rem;
 }
 
@@ -48,16 +146,20 @@ i{
 .menu{
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100vw;
-    height: 80px;
+    align-items: center;  
     background: var(--primary-bg-color);
-    border-bottom: solid 2px var(--border-color);
-    /* position: fixed;
-    top: 80px; */
     
 }
+
+.menu__item {
+    width: 100%;
+  }
+  
+  .menu__link {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+  }
 
 .menu__mobile{
     justify-content: space-between;
@@ -67,9 +169,8 @@ i{
     bottom: 0;
 }
 
-.menu a{
-    text-decoration: none;
-}
+
+
 
 .menu__item{
     width: 100%;
@@ -80,12 +181,15 @@ i{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
     color: var(--primary-color);
     gap: .50rem;
 }
 
-.menu__link.active .menu__icon,
-.menu__link.active .menu__text{
+.menu__link.active.menu__icon,
+.menu__link.active.menu__text
+.menu__link:hover .menu__icon,
+.menu__link:hover .menu__text{
     color: var(--primary-color);
     font-weight: 700;
 }
@@ -100,6 +204,18 @@ i{
 
 .menu__text{
     font-size: 0.75rem;
-    
     text-transform: uppercase;
+}
+
+.header__nav{
+    display: none;
+}
+
+.menu__principal{
+    gap: 1rem;
+}
+
+.header__toggle{
+    display: flex;
+    justify-content: flex-end;
 }

@@ -7,4 +7,6 @@
     box-sizing: border-box;
     vertical-align: baseline;
     list-style: none;
-}
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondary-bg-color) transparent;
+  }

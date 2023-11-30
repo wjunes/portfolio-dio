@@ -1,23 +1,31 @@
-
-
 const toggleTheme = document.getElementById("toggleTheme");
 const rootHtml = document.documentElement
+const accordionHeaders = document.querySelectorAll(".accordion__header");
+const menuLinks = document.querySelectorAll(".menu__link");
 
 function changeTheme(){
-const currentTheme = rootHtml.getAttribute("data-theme");
+  const currentTheme = rootHtml.getAttribute("data-theme");
 
-//Podemos llamar el cambio de theme de este modo
+  currentTheme === "dark" ? rootHtml.setAttribute("data-theme", "light") : rootHtml.setAttribute("data-theme", "dark")
 
-currentTheme === "dark" ? rootHtml.setAttribute("data-theme", "light") : rootHtml.setAttribute("data-theme", "dark");
-
-//Y tambien podemos hacerlo de este modo  
-//(comentar alternativamente para demostrarlo)
-
-if(currentTheme === "dark") rootHtml.setAttribute("data-theme", "light");
-else rootHtml.setAttribute("data-theme", "dark");
-
-    toggleTheme.classList.toggle("bi-brightness-high")
-    toggleTheme.classList.toggle("bi-moon-stars")
+  toggleTheme.classList.toggle("bi-sun")
+  toggleTheme.classList.toggle("bi-moon-stars")
 }
 
 toggleTheme.addEventListener("click", changeTheme);
+
+accordionHeaders.forEach(header => {
+  header.addEventListener("click", () => {
+    const accordionItem = header.parentElement;
+    const accordionActive = accordionItem.classList.contains("active");
+
+    accordionActive ? accordionItem.classList.remove("active") : accordionItem.classList.add("active");
+  })
+})
+
+menuLinks.forEach(item => {
+  item.addEventListener("click", () => {
+    menuLinks.forEach(i => i.classList.remove("active"));
+    item.classList.add("active");
+  })
+})

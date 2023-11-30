@@ -1,107 +1,555 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="pt-BR" data-theme="dark">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./assets/icons/favicon-32x32.png">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="./src/styles/global.css">
-    <link rel="stylesheet" href="./src/styles/reset.css">
-    <link rel="stylesheet" href="./src/styles/queries.css">
-    <link rel="stylesheet" href="./src/styles/footer.css">
-    <link rel="stylesheet" href="./src/styles/home.css">
-    <title>Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>W-J Informatica</title>
+  <meta name="description" content="">
+
+  <link rel="icon" href="./assets/icons/favicon-32x32.png">
+  <link rel="stylesheet" href="./src/styles/modal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="./src/styles/global.css">
+  <link rel="stylesheet" href="./src/styles/menus.css">
+
 </head>
 
 <body>
-    <header class="header">
-        <nav class="header__nav">
-            <ul class="menu menu__principal">
-                <li class="menu__item"><a href="Home" class="menu__link active">
-                        <span class="menu__text">Home</span></a>
-
-                </li>
-                <li class="menu__item"><a href="Proyectos" class="menu__link active">
-                        <span class="menu__text">Proyectos</span></a>
-
-                </li>
-                <li class="menu__item"><a href="Sobre" class="menu__link active">
-                        <span class="menu__text">Sobre</span></a>
-
-                </li>
-
-                <li class="menu__item"><a href="Service" class="menu__link active">
-                        <span class="menu__text">Service</span></a>
-
-                </li>
-                <li class="menu__item"><a href="Contacto" class="menu__link active">
-                        <span class="menu__text">Contacto</span></a>
-
-                </li>
-                <li class="menu__item"><a href="Formaciión" class="menu__link active">
-                        <span class="menu__text">Formación</span></a>
-
-                </li>
-
-            </ul>
-        </nav>
-        <div class="header__brand">
-            <img class="brand__logo" src="/assets/img/brand logo.png" alt="Logo del desarrollador wj-dev" width="70">
-        </div>
-        <div class="header__toggle">
-            <i id="toggleTheme" class="bi bi-brightness-high"></i>
-        </div>
-        
-    </header>
-    <nav class="nav__mobile">
-        <ul class="menu menu__mobile">
-            <li class="menu__item"><a href="#Home" class="menu__link active"><i class="bi bi-house menu__icon"></i>
-                    <span class="menu__text">Home</span></a>
-
-            </li>
-            <li class="menu__item"><a href="#Proyectos" class="menu__link "><i
-                        class="bi bi-window-stack menu__icon"></i>
-                    <span class="menu__text">Proyectos</span></a>
-
-            </li>
-            <li class="menu__item"><a href="#Sobre" class="menu__link "><i class="bi bi-person menu__icon"></i>
-                    <span class="menu__text">Sobre</span></a>
-
-            </li>
-
-            <li class="menu__item"><a href="#Service" class="menu__link "><i class="bi bi-tools menu__icon"></i>
-                    <span class="menu__text">Service</span></a>
-
-            </li>
-            <li class="menu__item"><a href="#Contacto" class="menu__link"><i
-                        class="bi bi-envelope menu__icon"></i>
-                    <span class="menu__text">Contacto</span></a>
-
-            </li>
-            <li class="menu__item"><a href="#Formaciión" class="menu__link"><i
-                        class="bi bi-mortarboard menu__icon"></i>
-                    <span class="menu__text">Formación</span></a>
-
-            </li>
-
-        </ul>
+  <header class="header">
+    <nav class="header--nav">
+      <ul class="menu menu--principal">
+        <li class="menu__item">
+          <a href="#" class="menu__link active">
+            <span class="menu__text">Home</span></a>
+        </li>
+        <li class="menu__item">
+          <a aria-current="section" href="#Proyectos" class="menu__link active">
+            <span class="menu__text">Proyectos</span></a>
+        </li>
+        <li class="menu__item">
+          <a aria-current="section" href="#Sobre" class="menu__link active">
+            <span class="menu__text">Sobre</span></a>
+        </li>
+        <li class="menu__item">
+          <a aria-current="section" href="#Service" class="menu__link active">
+            <span class="menu__text">Service</span></a>
+        </li>
+        <li class="menu__item">
+          <a aria-current="section" href="#Contacto" class="menu__link active">
+            <span class="menu__text">Contacto</span></a>
+        </li>
+      </ul>
     </nav>
-    <main id="home">
-        <h1>Soluciones Creativas & Desarrollo Front-End</h1>
-    </main>
-    <footer class="footer">
-            <div class="logo">
-                <img class="brand__logo" src="/assets/img/brand logo.png" width="80" alt="Logo Developer" >
+    <div class="header__brand">
+      <a href="#home">
+        <img class="brand__logo" src="/assets/img/brand logo.png" alt="Logo del desarrollador wj-dev" width="70">
+      </a>
+    </div>
+    <div class="header__toggle">
+      <i id="toggleTheme" class="bi bi-sun"></i>
+    </div>
+  </header>
+  <nav class="nav--mobile">
+    <ul class="menu menu--mobile">
+      <li class="menu__item">
+        <a href="#" class="menu__link active">
+          <i class="bi bi-house menu__icon"></i>
+          <span class="menu__text">Home</span></a>
+      </li>
+      <li class="menu__item">
+        <a href="#Proyectos" class="menu__link ">
+          <i class="bi bi-window-stack menu__icon"></i>
+          <span class="menu__text">Proyectos</span></a>
+      </li>
+      <li class="menu__item">
+        <a href="#Sobre" class="menu__link ">
+          <i class="bi bi-person menu__icon"></i>
+          <span class="menu__text">Sobre</span></a>
+      </li>
+      <li class="menu__item">
+        <a href="#Service" class="menu__link ">
+          <i class="bi bi-tools menu__icon"></i>
+          <span class="menu__text">Service</span></a>
+      </li>
+      <li class="menu__item">
+        <a href="#Contacto" class="menu__link">
+          <i class="bi bi-envelope menu__icon"></i>
+          <span class="menu__text">Contacto</span></a>
+      </li>
+
+    </ul>
+  </nav>
+
+  <main id="home">
+    <div class="main__content1">
+      <h1> <b>Soluciones Creativas &</b> Desarrollo Front-End</h1>
+      <p>Willans Junes, Montevideo Uruguay, Desarrollador e Instructor Front-End</p>
+      <ul class="menu--social">
+        <li class="menu__item">
+          <a class="menu__link" href="#">
+            <i class="menu__icon bi bi-github"></i></a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">
+            <i class="menu__icon bi bi-instagram"></i></a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">
+            <i class="menu__icon bi bi-facebook"></i></a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">
+            <i class="menu__icon bi bi-youtube"></i></a>
+        </li>
+      </ul>
+      <a href="#Proyectos">
+        <button class="btn btn--primary">
+          <span>Ver Proyectos</span>
+          <i class="bi bi-arrow-down-right"></i>
+        </button>
+      </a>
+
+    </div>
+    <div class="main__content2">
+      <iframe width="1280" height="720" src="https://www.youtube.com/embed/6svvtOjLA-A"
+        title="¿Qué es la programación y para qué se utiliza?" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </main>
+
+  <section class="tecnologias">
+    <h2>Dominamos las principales tecnologias del mercado</h2>
+
+    <ul class="tecnologias__list">
+      <li class="tecnologias__item">
+        <img class="tecnologias__logo" src="assets/images/tecnologias/Angular.svg" alt="Logo Angular">
+      </li>
+      <li class="tecnologias__item">
+        <img class="tecnologias__logo" src="assets/images/tecnologias/TypeScript.svg" alt="Logo TypeScript">
+      </li>
+      <li class="tecnologias__item">
+        <img class="tecnologias__logo" src="assets/images/tecnologias/Bootstrap.svg" alt="Logo Bootstrap">
+      </li>
+      <li class="tecnologias__item">
+        <img class="tecnologias__logo" src="assets/images/tecnologias/SASS.svg" alt="Logo SASS">
+      </li>
+      <li class="tecnologias__item">
+        <img class="tecnologias__logo" src="assets/images/tecnologias/atom.svg" alt="Logo react">
+      </li>
+      <li class="tecnologias__item">
+        <img class="tecnologias__logo" src="assets/images/tecnologias/openaigpt.svg" alt="Logo openAI">
+      </li>
+      <li class="tecnologias__item">
+        <img class="tecnologias__logo" src="assets/img/brand-python.svg" alt="Logo Python">
+      </li>
+    </ul>
+
+  </section>
+
+  <section id="Proyectos" class="projects">
+    <h2>Proyectos</h2>
+    <div class="projects__container">
+      <div class="projects__card">
+        <img class="card__cover" src="assets/images/projects/PR-spider.png" alt="Poster 3 spiderman">
+        <div class="card__body">
+          <h3 class="card__title">Spiderman-multiverso</h3>
+          <p class="card__description">Proyecto desarrollado con fines didácticos,<br>
+            para ser empleado como ejemplo <br> en clases de desarrollo web.
+          </p>
+          <ul class="card__list">
+            <a class="card__item" href="./spider-man-multiversos/principal.html" target="_blank">
+              <li class="card__item">Vea el proyecto en produccion aqui</li>
+            </a>
+            <li class="card__item">Tecnologías empleadas</li>
+          </ul>
+          <ul class="tecnologias__list">
+            <li class="tecnologias__item">
+              <img class="tecnologias__logo" src="assets/images/tecnologias/html5.svg" alt="Logo Angular">
+            </li>
+            <li class="tecnologias__item">
+              <img class="tecnologias__logo" src="assets/images/tecnologias/css3.svg" alt="Logo TypeScript">
+            </li>
+            <li class="tecnologias__item">
+              <img class="tecnologias__logo" src="assets/images/tecnologias/Bootstrap.svg" alt="Logo Bootstrap">
+            </li>
+            <li class="tecnologias__item">
+              <img class="tecnologias__logo" src="assets/images/tecnologias/javascript-file.svg" alt="Logo JS">
+            </li>
+          </ul>
+          <div class="card__buttons">
+            <button class="btn">
+              <span>Repositório</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="projects__card card--reverse">
+        <img class="card__cover" src="assets/images/projects/PR-discord.png" alt="Logo Tapa discord">
+        <div class="card__body">
+          <h3 class="card__title">Discord</h3>
+          <p class="card__description">Proyecto desarrollado con fines didácticos, <br>
+            para ser empleado como ejemplo<br>
+            en clases de desarrollo web. </p>
+          <ul class="card__list">
+            <a href="/discord/index.html">
+              <li class="card__item">Vea el proyecto en produccion aqui</li>
+            </a>
+            <li class="card__item">Tecnologías empleadas</li>
+          </ul>
+          <ul class="tecnologias__list">
+            <li class="tecnologias__item">
+              <img class="tecnologias__logo" src="assets/images/tecnologias/html5.svg" alt="Logo Angular">
+            </li>
+            <li class="tecnologias__item">
+              <img class="tecnologias__logo" src="assets/images/tecnologias/css3.svg" alt="Logo TypeScript">
+            </li>
+            <li class="tecnologias__item">
+              <img class="tecnologias__logo" src="assets/images/tecnologias/Bootstrap.svg" alt="Logo Bootstrap">
+            </li>
+            <li class="tecnologias__item">
+              <img class="tecnologias__logo" src="assets/images/tecnologias/javascript-file.svg" alt="Logo JS">
+            </li>
+          </ul>
+          <div class="card__buttons">
+            <button class="btn">
+              <span>Repositório</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="projects__card">
+        <img class="card__cover" src="assets/images/projects/PR-hbo-max.png" alt="Capa Games Store">
+        <div class="card__body">
+          <h3 class="card__title">HBO-MAX</h3>
+          <p class="card__description">Proyecto desarrollado con fines didácticos,<br> para ser empleado
+            como ejemplo <br> en clases de desarrollo web</p>
+          <ul class="card__list">
+            <a href="/HBO-MAX/index.html" target="_blank">
+              <li class="card__item">Vea el proyecto en produccion aqui</li>
+            </a>
+            <li class="card__item">Tecnologias empleadas</li>
+          </ul>
+          <ul class="tecnologias__list">
+            <li class="tecnologias__item">
+              <img class="tecnologias__logo" src="assets/images/tecnologias/html5.svg" alt="Logo Angular">
+            </li>
+            <li class="tecnologias__item">
+              <img class="tecnologias__logo" src="assets/images/tecnologias/css3.svg" alt="Logo TypeScript">
+            </li>
+            <li class="tecnologias__item">
+              <img class="tecnologias__logo" src="assets/images/tecnologias/Bootstrap.svg" alt="Logo Bootstrap">
+            </li>
+            <li class="tecnologias__item">
+              <img class="tecnologias__logo" src="assets/images/tecnologias/javascript-file.svg" alt="Logo JS">
+            </li>
+          </ul>
+          <div class="card__buttons">
+            <a class="nav-link active" aria-current="section" href="#home">
+              <button class="btn btn--primary">
+                <span>anterior</span>
+                <i class="bi bi-arrow-up-right"></i>
+              </button>
+            </a>
+            <a href="">
+              <button class="btn">
+                <span>Repositório</span>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <h3>traenos tu proyecto y lo desarrollamos juntos</h3>
+      <a href="https://github.com/wjunes" target="_blank">
+        <button class="btn btn--primary">
+          <span>Ver Todos Los Proyectos</span>
+          <i class="bi bi-arrow-up-right"></i>
+        </button>
+      </a>
+    </div>
+  </section>
+
+  <section id="Sobre" class="about">
+    <div class="about__content1">
+      <img class="about__photo" src="assets/images/WJP.png" alt="">
+      <div class="about__description">
+        <h2>Sobre mi</h2>
+        <p>Willans junes, Apasionado por tecnología desde mi primer "Hello world",
+          desde hace 4 años, estoy en permanente formación en el area tecnológica.
+          Actualmente actúo como desarrollador front-end, e instructor freelance.
+        </p>
+        <div class="about__icons">
+          <i class="bi bi-translate"></i>
+          <span>Inglés: Básico | Español: Nativo | Portugués: Fluido</span>
+        </div>
+        <div class="description__buttons">
+          <a href="https://www.linkedin.com/in/willans-junes/" target="_blank">
+            <button class="btn btn--primary">
+              <span>Conecte Conmigo</span>
+              <i class="bi bi-arrow-up-right"></i>
+            </button>
+          </a>
+          <a href="https://algoritmos.uy/C-V-responsivo/index.html" target="_blank">
+            <button class="btn">
+              <span>Currículum</span>
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="about__content2">
+      <div class="col1">
+        <div class="row1">
+          <h3>Formación</h3>
+          <h4>Desarrollo de Software con Metodologia Ágil. <br>
+            Desarrollo Front-End, HTML5 - CSS3 - JavaScript. <br>
+            Desarrollo Front-End React y Angular. <br>
+            Programación de juegos Con JavaScript. <br>
+            Machine Learning Specialist. <br>
+            I o T Specialist. <br>
+            AWS Specialist. <br>
+            GCP Specialist. <br>
+            Docker Specialist. <br>
+            Linux Ubuntu Specialist.
+          </h4>
+
+          <div class="about__icons">
+            <i class="bi bi-bank"></i>
+            <span>BIOS Montevideo - DIO Brasil - Udemy - Pucc - MIT</span>
+          </div>
+          <span>Diciembre 2015 - Actualmente</span>
+          <div class="about__icons">
+            <i class="bi bi-mortarboard"></i>
+            <span>Scrum Master</span>
+          </div>
+        </div>
+        <div class="row2">
+          <h3>Experiéncias</h3>
+          <h4>Instructor de desarrollo Front-End</h4>
+          <span>HTML5 - CSS3- JavaScript</span>
+          <span>Produccion de contenido educativo para
+            Iniciantes, orientados al Desarrollo Front-end.
+          </span>
+          <ul class="about__list">
+            <li class="about__item">Desarrollo e implementacion de cursos para la correcta utilización
+              de IA's como chatGPT y Bard en diferentes areas de actuación profesional. </li>
+            <li class="about__item">Diseño de UI UX Orientada a aplicaciones web y Mobile</li>
+            <li class="about__item">Desarrollo Front-End Angular y React</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col2">
+        <h3>Cursos</h3>
+        <div id="accordion">
+          <div class="accordion__item active">
+            <button class="accordion__header start">
+              <span>Versionamento de Código com Git e GitHub</span>
+              <i class="bi bi-caret-down-fill"></i>
+            </button>
+            <div class="accordion__body">
+              <p>
+                Versionamiento de codigo con Git y Github, correcta utilización de las herramientas de versionamiento,
+                comandos git e inmerssión en plataforma gitHub, Gitlab y GitHub Copilot.
+              </p>
+              <p>
+
+              </p>
             </div>
-            <h3>Algoritmos-uy 2023</h3>
-            <h3>WJ-Informática 2023</h3>
-            <div class="social__link"></div>
-    </footer>
-    <script src="/src/js/main.js"></script>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__header">
+              <span>Desarrollo moderno de software</span>
+              <i class="bi bi-caret-down-fill"></i>
+            </button>
+            <div class="accordion__body">
+              <p>
+                Desarrollo de software orientado a servicios en Nube. <br>
+                Diseño UI, UX, Diseño web, desarrollo web y mobile, Programación de juegos con JavaScript, Outsystems.
+                Servicios AWS y GCP. Machine learning. IoT, IA, React, Angular, Node,SQL, MySQL, linux .
+                Desarrollo Front-End con React y Angular
+              </p>
+              <p>
 
+              </p>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__header end">
+              <span>Logica de programacion</span>
+              <i class="bi bi-caret-down-fill"></i>
+            </button>
+            <div class="accordion__body end">
+              <p>
+                Logica de programación, Algoritmos, diagrama de flujo.
+              </p>
+              <p>
+                Seudocódigo para desarrollo cognitivo de la lógica de programación en lenguaje humano.
+              </p>
+            </div>
+          </div>
+        </div>
+  </section>
 
+  <!-- seccion de servicios tecnicos -->
+
+  <section id="Service" class="projects">
+    <h2>servicio tecnico</h2>
+    <h3>ventas de computadoras y equipamiento de red</h3>
+    <div class="projects__container">
+      <div class="projects__card">
+        <img class="card__cover" src="assets/images/projects/tec-4.jpg" alt="Reparacion pc">
+        <div class="card__body">
+          <h3 class="card__title">reparacion pc</h3>
+          <p class="card__description">Completo servicio técnico en reparacion<br> y actualización
+            De PC y Notebooks de <br> todas las marcas.
+          </p>
+          <ul class="card__list">
+            <li class="card__item">Sustitución de HDD pr SSD con clonado <br>de sistema
+              y archivos garantizando el <br> respaldo de su trabajo</li>
+            <li class="card__item">Solicite presupuesto</li>
+          </ul>
+
+          <div class="card__buttons">
+            <a href="https://api.whatsapp.com/send?phone=59891941935" class="" target="_blank">
+              <button class="btn">
+                <span>Presupuesto aquí</span>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="projects__card card--reverse">
+        <img class="card__cover" src="assets/images/projects/PC-armado.png" alt="Logo Tapa discord">
+        <div class="card__body">
+          <h3 class="card__title">armado pc</h3>
+          <p class="card__description">Armado de computadoras a pedido,<br> Gamers, Diseñadores, Profesonales <br>
+            de todas las orientaciones.</p>
+          <ul class="card__list">
+            <li class="card__item">Consultenos sin compromiso</li>
+            <li class="card__item">Solicite Su presupuesto</li>
+          </ul>
+          <div class="card__buttons">
+            <a href="https://api.whatsapp.com/send?phone=59891941935" class="" target="_blank">
+              <button class="btn">
+                <span>Presupuesto aquí</span>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="projects__card">
+        <img class="card__cover" src="assets/images/projects/consolas.png" alt="Capa Games Store">
+        <div class="card__body">
+          <h3 class="card__title">consolas</h3>
+          <p class="card__description">Reparación de consolas de video juegos</p>
+          <ul class="card__list">
+            <li class="card__item">Consulte sin compromiso</li>
+          </ul>
+          <div class="card__buttons">
+            <a href="https://api.whatsapp.com/send?phone=59891941935" class="" target="_blank">
+              <button class="btn">
+                <span>Presupuesto aquí</span>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="projects__card card--reverse">
+        <img class="card__cover" src="assets/images/projects/HDD.png" alt="Logo Tapa discord">
+        <div class="card__body">
+          <h3 class="card__title">Rescate de datos</h3>
+          <p class="card__description">
+          <h4>No lo de por perdido</h4><br>Discos duros dañados o formateados. <br>
+          Pérdida de datos por ataques de virus <br> y accidentes de todo tipo.
+          </p>
+          <ul class="card__list">
+            <li class="card__item">Consultenos sin compromiso</li>
+            <li class="card__item">Solicite Su presupuesto</li>
+          </ul>
+          <div class="card__buttons">
+            <a href="https://api.whatsapp.com/send?phone=59891941935" class="" target="_blank">
+              <button class="btn">
+                <span>Presupuesto aquí</span>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <a href="#home">
+        <button class="btn btn--primary">
+          <span>Volver al Inicio</span>
+          <i class="bi bi-arrow-up-right"></i>
+        </button>
+      </a>
+    </div>
+  </section>
+
+  <section id="Contacto" class="contact">
+    <h2>medios de contacto</h2>
+    <p>Estoy disponible para servicios y nuevas conexiones.
+      Comuníquese por e-mail o conéctese conmigo a través de mis redes sociales.
+    </p>
+    <ul class="menu menu--social">
+      <li>
+        <a class="menu__link" href="https://github.com/wjunes" target="_blank">
+          <i class="menu__icon bi bi-github"></i>
+          <span>GitHub</span>
+        </a>
+      </li>
+      <li>
+        <a class="menu__link" href="https://www.linkedin.com/in/willans-junes/" target="_blank">
+          <i class="menu__icon bi bi-linkedin"></i>
+          <span>LinkedIn</span>
+        </a>
+      </li>
+      <li>
+        <a class="menu__link" href="https://www.instagram.com/informatica_wj/" target="_blank">
+          <i class="menu__icon bi bi-instagram"></i>
+          <span>Instagram</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://api.whatsapp.com/send?phone=59891941935" class="" target="_blank">
+          <i class="bi bi-whatsapp"></i>
+          <span>WhatsApp</span>
+        </a>
+      </li>
+    </ul>
+    <a href="mailto:willans@algoritmos.uy">
+      <button class="btn btn--primary">
+        <span class="email">willans@algoritmos.uy</span>
+      </button>
+    </a>
+    <button class="btn1 btn--primary2" id="openModalBtn">
+      <span class="span">mapa como llegar</span>
+    </button>
+  </section>
+
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModalBtn">Cerrar</span>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d818.3488197040055!2d-56.178421830354644!3d-34.871419198011395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f8072659e2067%3A0xd86cfa2a8a8830e0!2sAntonio%20Machado%201843%2C%2011800%20Montevideo%2C%20Departamento%20de%20Montevideo!5e0!3m2!1spt-BR!2suy!4v1701377971794!5m2!1spt-BR!2suy"
+        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+      </iframe>
+    </div>
+  </div>
+
+  <footer>
+    <div class="logo">
+      <img class="brand__logo" src="/assets/img/brand logo.png" width="80" alt="Logo Developer">
+      <p>Derechos Reservados 2024</p>
+    </div>
+    <p>Algoritmos-uy 2024</p>
+    <p>WJ-Informática 2024</p>
+    <div class="social__link"></div>
+  </footer>
+  <script src="/src/js/modal.js"></script>
+  <script src="/src/js/main.js"></script>
 </body>
 
 </html>
